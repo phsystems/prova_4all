@@ -13,12 +13,14 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class SuccessfullyOrder {
   private SuccessfullyObject successfullyObject;
+  private WebDriver driver;
 
   public SuccessfullyOrder(WebDriver driver) {
+    this.driver = driver;
     this.successfullyObject = new SuccessfullyObject(driver);
   }
 
-  public void checkOrderSuccess(WebDriver driver) {
+  public void checkOrderSuccess() {
     WebElement orderSuccess;
     orderSuccess = this.successfullyObject.getResulte();
     String value = orderSuccess.getText();

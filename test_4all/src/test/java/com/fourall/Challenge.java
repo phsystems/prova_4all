@@ -28,7 +28,7 @@ public class Challenge{
         this.driver.get(Home_URL); 
         this.driver.manage().window().maximize();
         this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        this.homeTask         = new HomeTask(driver); 
+           this.homeTask         = new HomeTask(driver); 
         this.ShoppingCartTask = new ShoppingCartTask(driver);   
         this.successfullyOrder= new SuccessfullyOrder(driver);
     }
@@ -36,8 +36,7 @@ public class Challenge{
     @Test
     public void buyProduct(){    
               
-    //    this.homeTask.getSweets();
-        this.homeTask.selectListProduct();
+        this.homeTask.getSweets();
         Reports.log(LogStatus.INFO, "Seleciona Produtos", ScreenShot.capture(driver));
         this.homeTask.backHome();
         Reports.log(LogStatus.INFO, "Pagina Inicial", ScreenShot.capture(driver));
@@ -48,7 +47,7 @@ public class Challenge{
         this.ShoppingCartTask.AddItemsProduct();
         Reports.log(LogStatus.INFO, "Altera quantidade", ScreenShot.capture(driver)); 
         this.ShoppingCartTask.checkOut();
-        this.successfullyOrder.checkOrderSuccess(driver);
+        this.successfullyOrder.checkOrderSuccess();
         this.ShoppingCartTask.close();
         
         

@@ -48,8 +48,16 @@ public class HomeAppObject{
             .visibilityOfElementLocated(By.id("cart-btn")));
     }
 
-    public List<WebElement> getSweets = 
-            this.driver.findElements(By.xpath("//ul[@class='sc-VigVT fjJcfV']"));
+    public List<WebElement> getSweets() {
+
+        final List<WebElement> sweets = this.driver.findElements(By.xpath("//ul/li/*/button"));
+
+        return sweets;
+
+    }
+
+    // public List<WebElement> getSweets = 
+    //         
 
 }   
 

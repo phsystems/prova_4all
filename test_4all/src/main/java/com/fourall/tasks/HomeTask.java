@@ -39,8 +39,8 @@ public class HomeTask {
   public void getSweets(){
     this.homeAppObject.getSelectList().click();
     this.homeAppObject.getSelectListSweets().click();
-    for(WebElement Sweets : this.homeAppObject.getSweets){
-       Sweets.click();
+    for(WebElement sweet : this.homeAppObject.getSweets()){
+       sweet.click();
     }
        
   }
