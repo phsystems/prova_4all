@@ -8,10 +8,15 @@ public class ShoppingCartTask{
     public ShoppingCartTask(WebDriver driver) {  
 		this.ShoppingCartObject = new ShoppingCartObject(driver);
   }
-  public void AddItemsProduct(){
-      for (int i = 0; i < 3; i++){
+  public void AddItemsProduct(int amount){
+      for (int i = 0; i < amount; i++){
          this.ShoppingCartObject.getbuttonAddItems().click();
       }
+  }
+  public void RemoveItemsProduct(int amount){
+    for (int i = 0; i < amount; i++){
+       this.ShoppingCartObject.getbuttonRemoveItems().click();
+    }
   }
   public void checkOut(){
     this.ShoppingCartObject.getbuttonCheckout().click();

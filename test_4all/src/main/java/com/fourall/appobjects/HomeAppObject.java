@@ -8,9 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-
-
 public class HomeAppObject{
     private WebDriver driver;
 
@@ -22,11 +19,6 @@ public class HomeAppObject{
         return wait.until(ExpectedConditions
             .visibilityOfElementLocated(By.id("open-categories-btn")));
     }
-    public WebElement getSelectListSweets(){
-		WebDriverWait wait = new WebDriverWait(this.driver, 3);
-        return wait.until(ExpectedConditions
-            .visibilityOfElementLocated(By.id("category-1")));
-    }
     public WebElement getSelectListAll(){
 		WebDriverWait wait = new WebDriverWait(this.driver, 3);
         return wait.until(ExpectedConditions
@@ -37,27 +29,32 @@ public class HomeAppObject{
         return wait.until(ExpectedConditions
             .visibilityOfElementLocated(By.id("category-0")));
     }
-    public WebElement getSelectProduct(){
+    public WebElement getSelectListSweets(){
 		WebDriverWait wait = new WebDriverWait(this.driver, 3);
         return wait.until(ExpectedConditions
-            .visibilityOfElementLocated(By.id("add-product-4-btn")));
+            .visibilityOfElementLocated(By.id("category-1")));
+    }
+    public WebElement getSelectListSnacks(){
+		WebDriverWait wait = new WebDriverWait(this.driver, 3);
+        return wait.until(ExpectedConditions
+            .visibilityOfElementLocated(By.id("category-2")));
+    }
+    public WebElement getSelectSnacks(){
+		WebDriverWait wait = new WebDriverWait(this.driver, 3);
+        return wait.until(ExpectedConditions
+            .visibilityOfElementLocated(By.id("add-product-3-btn")));
     }
     public WebElement getSelectCart(){
 		WebDriverWait wait = new WebDriverWait(this.driver, 3);
         return wait.until(ExpectedConditions
             .visibilityOfElementLocated(By.id("cart-btn")));
     }
-
-    public List<WebElement> getSweets() {
-
-        final List<WebElement> sweets = this.driver.findElements(By.xpath("//ul/li/*/button"));
-
-        return sweets;
-
+    public List<WebElement> getAllProducts() {
+        final List<WebElement> allProducts = 
+                this.driver.findElements(By.xpath("//ul/li/*/button"));
+        return allProducts ;
     }
-
-    // public List<WebElement> getSweets = 
-    //         
+            
 
 }   
 

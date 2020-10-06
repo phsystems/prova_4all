@@ -39,10 +39,21 @@ public class HomeTask {
   public void getSweets(){
     this.homeAppObject.getSelectList().click();
     this.homeAppObject.getSelectListSweets().click();
-    for(WebElement sweet : this.homeAppObject.getSweets()){
-       sweet.click();
+    for(WebElement sweet : this.homeAppObject.getAllProducts()){
+      sweet.click();
     }
-       
+  }
+  public void getDrinks(){
+    this.homeAppObject.getSelectList().click();
+    this.homeAppObject.getSelectListDrinks().click();
+    for(WebElement drinks : this.homeAppObject.getAllProducts()){
+        drinks.click();
+      }       
+  }
+  public void getSnacks(){
+    this.homeAppObject.getSelectList().click();
+    this.homeAppObject.getSelectListSnacks();
+    this.homeAppObject.getSelectSnacks();
   }
    
 }

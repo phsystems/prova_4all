@@ -17,6 +17,11 @@ public class ShoppingCartObject{
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By
         .xpath("//div[@id='add-product-4-qtd']/span[text()='+']")));
     }
+    public WebElement getbuttonRemoveItems(){
+      WebDriverWait wait = new WebDriverWait(this.driver, 3);
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By
+        .xpath("//div[@id='remove-product-3-qtd']/span[text()='-']")));
+    }
     public WebElement getbuttonCheckout(){
       WebDriverWait wait = new WebDriverWait(this.driver, 3);
         return wait.until(ExpectedConditions
