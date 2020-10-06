@@ -24,7 +24,7 @@ public class HomeAppObject{
         return wait.until(ExpectedConditions
             .visibilityOfElementLocated(By.id("category-all")));
     }
-    public WebElement getSelectDrinks(){
+    public WebElement getSelectListDrinks(){
 		WebDriverWait wait = new WebDriverWait(this.driver, 3);
         return wait.until(ExpectedConditions
             .visibilityOfElementLocated(By.id("category-0")));

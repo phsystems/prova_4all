@@ -8,14 +8,19 @@ public class ShoppingCartTask{
     public ShoppingCartTask(WebDriver driver) {  
 		this.ShoppingCartObject = new ShoppingCartObject(driver);
   }
-  public void AddItemsProduct(int amount){
-      for (int i = 0; i < amount; i++){
-         this.ShoppingCartObject.getbuttonAddItems().click();
+  public void AddItemsSweets(){
+      for (int i = 0; i < 3; i++){
+         this.ShoppingCartObject.getbuttonAddSweets().click();
       }
   }
-  public void RemoveItemsProduct(int amount){
-    for (int i = 0; i < amount; i++){
-       this.ShoppingCartObject.getbuttonRemoveItems().click();
+  public void AddItemsSnacks(){
+    for (int i = 0; i < 8; i++){
+       this.ShoppingCartObject.getbuttonAddSnacks().click();
+    }
+}
+  public void RemoveItemsSnacks(){
+    for (int i = 0; i < 4; i++){
+       this.ShoppingCartObject.getbuttonRemoveSnacks().click();
     }
   }
   public void checkOut(){

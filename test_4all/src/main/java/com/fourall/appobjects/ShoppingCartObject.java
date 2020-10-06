@@ -12,12 +12,18 @@ public class ShoppingCartObject{
   public ShoppingCartObject(WebDriver driver){
         this.driver = driver; 
     } 
-    public WebElement getbuttonAddItems(){
+    public WebElement getbuttonAddSweets(){
       WebDriverWait wait = new WebDriverWait(this.driver, 3);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By
         .xpath("//div[@id='add-product-4-qtd']/span[text()='+']")));
     }
-    public WebElement getbuttonRemoveItems(){
+    public WebElement getbuttonAddSnacks(){
+      WebDriverWait wait = new WebDriverWait(this.driver, 3);
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By
+        .xpath("//div[@id='add-product-3-qtd']/span[text()='+']")));
+    }
+
+    public WebElement getbuttonRemoveSnacks(){
       WebDriverWait wait = new WebDriverWait(this.driver, 3);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(By
         .xpath("//div[@id='remove-product-3-qtd']/span[text()='-']")));

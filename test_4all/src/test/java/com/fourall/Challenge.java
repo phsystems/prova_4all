@@ -42,7 +42,7 @@ public class Challenge{
         this.homeTask.shoppingCart();  
         Reports.log(LogStatus.INFO, "Carrinho com produtos", ScreenShot.capture(driver));  
         
-        this.ShoppingCartTask.AddItemsProduct(3);
+        this.ShoppingCartTask.AddItemsSweets();
         Reports.log(LogStatus.INFO, "Altera quantidade", ScreenShot.capture(driver)); 
         this.ShoppingCartTask.checkOut();
         this.successfullyOrder.checkOrderSuccess();

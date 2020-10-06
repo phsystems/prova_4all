@@ -14,7 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.util.concurrent.TimeUnit;
 
-public ChallengeTwo{
+public class ChallengeTwo{
   private HomeTask homeTask;
   private ShoppingCartTask ShoppingCartTask;
   private WebDriver driver;  
@@ -42,9 +42,10 @@ public ChallengeTwo{
         this.homeTask.shoppingCart();  
         Reports.log(LogStatus.INFO, "Carrinho com produtos", ScreenShot.capture(driver));  
         
-        this.ShoppingCartTask.AddItemsProduct(8);
-        this.ShoppingCartTask.RemoveItemsProduct(4);
-        Reports.log(LogStatus.INFO, "Altera quantidade", ScreenShot.capture(driver)); 
+        this.ShoppingCartTask.AddItemsSnacks();
+        Reports.log(LogStatus.INFO, "Aumneta quantidade ", ScreenShot.capture(driver)); 
+        this.ShoppingCartTask.RemoveItemsSnacks();
+        Reports.log(LogStatus.INFO, "Diminui quantidade", ScreenShot.capture(driver)); 
         this.ShoppingCartTask.checkOut();
         this.successfullyOrder.checkOrderSuccess();
         this.ShoppingCartTask.close();        

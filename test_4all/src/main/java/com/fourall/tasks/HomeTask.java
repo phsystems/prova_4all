@@ -52,8 +52,8 @@ public class HomeTask {
   }
   public void getSnacks(){
     this.homeAppObject.getSelectList().click();
-    this.homeAppObject.getSelectListSnacks();
-    this.homeAppObject.getSelectSnacks();
+    this.homeAppObject.getSelectListSnacks().click();
+    this.homeAppObject.getSelectSnacks().click();
   }
    
 }
